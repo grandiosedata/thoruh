@@ -7,10 +7,12 @@
     "eslint-config-standard": "7.0.0",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "2.1.0",
+    "flow-bin": "0.54.1",
+    "flow-remove-types": "1.2.1",
     "jest": "21.1.0"
   },
   "directories": {
-    "lib": "src",
+    "lib": "lib",
     "test": "__tests__"
   },
   "engines": {
@@ -18,16 +20,22 @@
   },
   "homepage": "https://github.com/jonathanmarvens/thoruh",
   "license": "Apache-2.0",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "name": "thoruh",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/jonathanmarvens/thoruh.git"
   },
   "scripts": {
-    "ci-build": "npm run lint && npm test",
+    "build-src": "npm run flow-remove-types",
+    "ci-build": "npm run verify",
+    "flow": "flow --show-all-errors --strip-root",
+    "flow-remove-types": "flow-remove-types --out-dir lib/ --pretty --sourcemaps src/",
     "lint": "eslint .",
-    "test": "jest"
+    "prepublishOnly": "npm run verify && npm run build-src",
+    "test": "jest",
+    "verify": "npm run flow && npm run lint && npm test",
+    "watch-build-src": "./tools/watch-build-src"
   },
   "version": "0.0.0"
 }

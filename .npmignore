@@ -56,3 +56,10 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# Custom
+
+/__tests__/
+/coverage/
+/src/
+/tools/
