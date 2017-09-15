@@ -59,5 +59,6 @@ typings/
 
 # Custom
 
+.vscode/
 /coverage/
 /lib/

@@ -59,6 +59,7 @@ typings/
 
 # Custom
 
+.vscode/
 /__tests__/
 /coverage/
 /src/
