@@ -2,6 +2,12 @@
   "author": "Jonathan Barronville <jonathan@belairlabs.com>",
   "bugs": "https://github.com/jonathanmarvens/thoruh/issues",
   "description": "A npm package for parsing GNU-style command-line options (inspired by the awesome argtable2 C library).",
+  "devDependencies": {
+    "eslint": "3.16.1",
+    "eslint-config-standard": "7.0.0",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "2.1.0"
+  },
   "directories": {
     "lib": "src"
   },
@@ -15,6 +21,9 @@
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/jonathanmarvens/thoruh.git"
+  },
+  "scripts": {
+    "lint": "eslint ."
   },
   "version": "0.0.0"
 }
