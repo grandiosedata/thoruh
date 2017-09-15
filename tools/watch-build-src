@@ -22,10 +22,11 @@ const childProcess = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
+const LOGGING_PREFIX = '[tools/watch-build-src]'
 const ROOT_DIRECTORY = path.join(__dirname, '..')
 const SRC_DIRECTORY = path.join(ROOT_DIRECTORY, 'src')
 
-console.info('[tools/watch-build-src]: Starting file watcher …')
+console.info(`${LOGGING_PREFIX}: Starting file watcher …`)
 
 fs.watch(SRC_DIRECTORY, {
   encoding: 'utf8',
@@ -33,11 +34,11 @@ fs.watch(SRC_DIRECTORY, {
   recursive: true
 }, (eventType, fileName) => {
   if (fileName !== null) {
-    console.info(`[tools/watch-build-src]: File "${
+    console.info(`${LOGGING_PREFIX}: File "${
       path.join('src', fileName)
     }" updated … triggering build script.`)
   } else {
-    console.info('[tools/watch-build-src]: File updated … triggering build script.')
+    console.info(`${LOGGING_PREFIX}: File updated … triggering build script.`)
   }
 
   childProcess.spawn('npm', ['run', 'build-src'], {
