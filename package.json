@@ -6,10 +6,12 @@
     "eslint": "3.16.1",
     "eslint-config-standard": "7.0.0",
     "eslint-plugin-promise": "3.5.0",
-    "eslint-plugin-standard": "2.1.0"
+    "eslint-plugin-standard": "2.1.0",
+    "jest": "21.1.0"
   },
   "directories": {
-    "lib": "src"
+    "lib": "src",
+    "test": "__tests__"
   },
   "engines": {
     "node": ">=6.5.0"
@@ -23,7 +25,9 @@
     "url": "git+ssh://git@github.com/jonathanmarvens/thoruh.git"
   },
   "scripts": {
-    "lint": "eslint ."
+    "ci-build": "npm run lint && npm test",
+    "lint": "eslint .",
+    "test": "jest"
   },
   "version": "0.0.0"
 }
