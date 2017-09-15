@@ -2,11 +2,15 @@
   "author": "Jonathan Barronville <jonathan@belairlabs.com>",
   "bugs": "https://github.com/jonathanmarvens/thoruh/issues",
   "description": "A npm package for parsing GNU-style command-line options (inspired by the awesome argtable2 C library).",
+  "directories": {
+    "lib": "src"
+  },
   "engines": {
     "node": ">=6.5.0"
   },
   "homepage": "https://github.com/jonathanmarvens/thoruh",
   "license": "Apache-2.0",
+  "main": "src/index.js",
   "name": "thoruh",
   "repository": {
     "type": "git",
