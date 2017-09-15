@@ -1,5 +1,5 @@
 const thoruh = require('../')
 
 test('It works.', () => {
-  expect(thoruh()).toBe('Hello, world!')
+  expect(thoruh('Jest')).toBe('Hello, Jest!')
 })

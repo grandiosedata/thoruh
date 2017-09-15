@@ -3,8 +3,10 @@
   "bugs": "https://github.com/jonathanmarvens/thoruh/issues",
   "description": "A npm package for parsing GNU-style command-line options (inspired by the awesome argtable2 C library).",
   "devDependencies": {
+    "babel-eslint": "8.0.0",
     "eslint": "4.6.1",
     "eslint-config-standard": "10.2.1",
+    "eslint-plugin-flowtype": "2.35.1",
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-node": "5.1.1",
     "eslint-plugin-promise": "3.5.0",

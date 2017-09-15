@@ -4,15 +4,19 @@
     "node": true
   },
   "extends": "standard",
+  "parser": "babel-eslint",
   "parserOptions": {
+    "allowImportExportEverywhere": false,
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "globalReturn": true,
       "impliedStrict": true
     },
-    "ecmaVersion": 2016
+    "ecmaVersion": 2016,
+    "sourceType": "script"
   },
   "plugins": [
+    "flowtype",
     "promise",
     "standard"
   ],

@@ -18,4 +18,15 @@
 
 // @flow
 
-module.exports = exports = () => 'Hello, world!'
+module.exports = exports = (name: ?string): string => {
+  let greeting: string
+
+  if ((typeof name !== 'undefined') &&
+      (name !== null)) {
+    greeting = `Hello, ${name}!`
+  } else {
+    greeting = 'Hello, world!'
+  }
+
+  return greeting
+}
