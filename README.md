@@ -1,22 +1,32 @@
 # thoruh
 
-[![npm](https://img.shields.io/npm/v/thoruh.svg?style=flat-square)](https://www.npmjs.com/package/thoruh)
-[![npm](https://img.shields.io/npm/l/thoruh.svg?style=flat-square)](http://spdx.org/licenses/Apache-2.0.html)
 [![Travis](https://img.shields.io/travis/jonathanmarvens/thoruh.svg?style=flat-square)](https://travis-ci.org/jonathanmarvens/thoruh)
-[![Greenkeeper](https://badges.greenkeeper.io/jonathanmarvens/thoruh.svg)](https://greenkeeper.io)
 
-A __npm__ package for parsing GNU-style command-line options (*inspired by the awesome __argtable2__ __C__ library*).
+A __Go__ package for parsing GNU-style (and DOS-style) command-line options (*inspired by the awesome __argtable2__ __C__ library*).
 
 ## Installation
 
 ```sh
-npm i --save thoruh
+go get -u -v github.com/grandiosedata/thoruh
 ```
 
 ## Usage
 
-```js
-const thoruh = require('thoruh')
+```go
+package main
+
+import (
+	// "fmt"
+	// "os"
+
+	// "github.com/grandiosedata/thoruh"
+)
+
+
+func main() {
+	// --foo -x123 /x456 /x:"789" /x / /x:"/"
+	// fmt.Printf("%#v\n", os.Args) // []string{"--foo", "-x123", "/x456", "/x:789", "/x", "/", "/x:/"}
+}
 
 // TODO: Complete usage example …
 ```
